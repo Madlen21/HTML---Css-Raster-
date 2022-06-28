@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0; /*reset Inner padding*/
+    margin: 0; /*reset Outer Padding*/
+}
+
+:root {
+    --bgColor: #C689C6;
+    --c1:#FBD6D2;
+    --c2:#F190B7;
+    --c3:#CE49BF;
+    --c4:#A63EC5;
+    --c5:#810955;
+    --c6:#610C63;
+}
+
+body {
+    background: var(--bgColor);
+    height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-template-rows:repeat(12, 1fr);
+}
+
+.item.head{
+    background: rebeccapurple;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+.item.fu{
+    background: rebeccapurple;
+    grid-column: 1 / span 12;
+    grid-row: 12 / span 1;
+}
+
+.item.smL{
+    background: darkmagenta;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 10
+}
+.item.smR{
+    background: darkmagenta;
+    grid-column: 12 / span 1;
+    grid-row: 2 / span 10
+}
+
+.item.nav{
+    background: deeppink;
+    grid-column: 2 / span 10;
+}
+
+.item.body{
+    grid-column: 2 / span 10;
+    grid-row: 3 / span 9
+}
+
+.item{
+    font-size: 1.4em;
+    color: papayawhip;
+}
+
+.body{
+    background: radial-gradient(ellipse at top,var(--c1),var(--c2),var(--c3),transparent),radial-gradient(ellipse at top,var(--c4),var(--c5),var(--c6),transparent);
+    background-size: 400% 400%;
+    -webkit-animation: prettyBG 12s ease-in-out infinite;
+}
+
+@-webkit-keyframes prettyBG{
+    0%{background-position: 0 50%}
+    50%{background-position: 100% 100%}
+    100%{background-position: 0 50%}
+}
